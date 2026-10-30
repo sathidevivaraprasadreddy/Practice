@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Linking</title>
+</head>
+<body>
+    <h2 id="demo">Welcome</h2>
+    <script src="script.js"></script>
+</body>
+</html>
+
+document.getElementById("demo").innerHTML =
+    "JavaScript Connected Successfully!";
+
+<!DOCTYPE html>
+<html>
+<body>
+    <h2 id="title">Hello World</h2>
+    <p class="text">Welcome to JavaScript</p>
+
+    <script>
+        let a = document.getElementById("title");
+        let b = document.querySelector(".text");
+        let c = document.querySelectorAll("p");
+
+        console.log(a.innerHTML);
+        console.log(b.innerHTML);
+        console.log(c.length);
+    </script>
+</body>
+</html>
+
+Hello World
+Welcome to JavaScript
+1
+
+<!DOCTYPE html>
+<html>
+<body>
+    <button id="btn">Click Me</button>
+
+    <script>
+        document.getElementById("btn")
+        .addEventListener("click", function() {
+            alert("Button Clicked!");
+        });
+    </script>
+</body>
+</htmt>
+
+
+<!DOCTYPE html>
+<html>
+<body>
+    <button onclick="showMessage()">Click Here</button>
+    <p id="result"></p>
+
+    <script>
+        function showMessage() {
+            document.getElementById("result").innerHTML =
+                "Button Click Event Handled!";
+        }
+    </script>
+</body>
+</html>
+
+// Function Declaration
+function add(a, b) {
+    return a + b;
+}
+
+// Function Definition / Function Expression
+let sub = function(a, b) {
+    return a - b;
+};
+
+// Arrow Function
+let mul = (a, b) => a * b;
+
+console.log("Addition:", add(10, 5));
+console.log("Subtraction:", sub(10, 5));
+console.log("Multiplication:", mul(10, 5));
+
+
